@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* 
+Theme Name: Was Online
+Theme URI: http://vhenrique.com
+Description: Was Online WordPress responsive theme
+Version: 1.0
+Tags: 
+
+Author: Vitor Henrique
+Author URI: http://vhenrique.com
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+Text Domain: lang
+*/
+
+@import url('assets/css/foundation.css');
+
+/* Global parameters are about space customization, considering that I'm using the Foundation Zurb framework */
+/* global Padding */
+.paddingUD15{padding: 15px 0;}
+.paddingUD50{padding: 50px 0;}
+.noPadding{padding: 0;}
+/* end global Padding */
+
+/* global Margin */
+.marginBottom15{margin-bottom: 15px;}
+.marginUD20{margin: 20px 0;}
+.noMargin{margin: 0;}
+/* end global Margin */
+
+/* global Colors */
+.colorFFF{color: #FFF;}
+.color7e8486{color: #7e8486}
+.color999{color: #999;}
+.color666{color: #666;}
+.color0088cc{color: #0088cc;}
+.color5f5f5f{color: #5f5f5f;}
+/* end global Colors */
+
+/* Global Backgrounds */
+.bg013040{background-color: #013040;}
+.bgefefef{background-color: #efefef;}
+.bg6a6a6a{background-color: #6a6a6a;}
+/* End Global Backgrounds*/
+
+/* Global Images Alignments */
+article p img{margin: 10px 15px;}
+.aligncenter{display: block; margin: 0 auto;}
+.alignleft{float: left; margin: 10px 15px 10px 0;}
+.alignright{float: right; margin: 10px 0 10px 15px;}
+/*End Images Alignments */
+
+/* Header */
+header.main{border-bottom: solid 1px #1f2022;}
+/* End Header */
+
+/* Footer */
+footer.main{background-color: #121212; margin-top: 50px;}
+footer a, footer{color: #777;}
+footer a:hover{color: #777; opacity: 0.8;}
+footer ul{list-style: none; margin: 0; font-size: 13px;}
+footer ul li{margin: 10px 0;}
+footer ul li a{padding: 0;}
+footer p{font-size: 13px;}
+/* End Footer */
+
+/* Social networks */
+header .social li{background-color: #013040; border-radius: 20px; padding: 8px; display: inline-block;}
+footer .social li{background-color: #444; border-radius: 20px; padding: 8px; display: inline-block;}
+.social li a.fb{background: url('assets/img/fb.png')no-repeat; background-position: center; padding: 10px; }
+.social li a.tw{background: url('assets/img/tw.png')no-repeat; background-position: center; padding: 10px; }
+.social li a.in{background: url('assets/img/in.png')no-repeat; background-position: center; padding: 10px; }
+/* End Social Networks */
+
+/* Custom icons */
+.address::before{content: url('assets/img/pinDark.png'); margin-right: 5px;}
+.phone::before{content: url('assets/img/phoneDark.png'); margin-right: 5px;}
+.mail a::before{content: url('assets/img/mail.png'); margin-right: 5px;}
+/* End Custopm icons */
+
+/* Menu Header */
+.contactPhone{padding: 0;}
+#menu-header{display: inline-block;}
+#menu-header li, .contactPhone{position: relative; margin: 0 10px; display: inline-block;}
+#menu-header li a, .contactPhone label{color: #999999;}
+#menu-header li::before{content: url('assets/img/bulletDark.png'); position: absolute; top: 6px; transform: rotate(270deg);}
+.contactPhone::before{content: url('assets/img/phone.png'); position: absolute; top: 6px;}
+.contactPhone::before{top: 2px;}
+.contactPhone label{padding: 2px 0 0 15px;}
+/* End Menu Header */
+
+/* Main menu */
+#menu-main{list-style: none; background: #eee; display: inline-block; border-radius: 5px;}
+#menu-main li{display: inline-block; text-transform: uppercase; font-weight: bold; border-radius: 5px;}
+#menu-main li.menu-item-has-children{border-radius: 5px 5px 0 0;}
+#menu-main li.menu-item-has-children::after{content: url('assets/img/bulletDark.png'); display: inline-block; margin-left: -8px; vertical-align: middle ;line-height: 0px;}
+#menu-main li.menu-item-has-children:hover::after{content: url('assets/img/bullet.png'); }
+#menu-main > li:hover, #menu-main .current-menu-item{background-color: #0087ca;}
+#menu-main li:hover > a, #menu-main li.current-menu-item a{color: #FFF;}
+#menu-main li .sub-menu{background: linear-gradient(#0087cc, #023db0); border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; display: none;}
+#menu-main li a{color: #013040; padding: 10px 8px; display: inline-block;}
+#menu-main li ul.sub-menu{position: absolute; margin: 0px; z-index: 1;}
+#menu-main li ul.sub-menu li{display: block; text-transform: initial; border-bottom: solid 1px #338dd5; border-radius: initial;}
+#menu-main li ul.sub-menu li:last-child{border: none;}
+#menu-main li ul.sub-menu li a{color: #FFF; padding: 5px 15px;}
+#menu-main li ul.sub-menu li a:hover{opacity: 0.8;}
+/* End Main menu*/
+
+/* Search form */
+.searchForm{padding: 0; position: relative;}
+.searchForm .searchInput{margin: 0; padding: 5px; height: 30px; border: solid 1px #CCC; border-radius: 16px;}
+.searchForm input[type="submit"]{position: absolute; right: 10px; top: 5px; border: none; background: url('assets/img/search.png')no-repeat; padding: 5px 10px; background-size:100%;}
+/* End Search Form */
+
+/* Main Slider */
+.mainSlider{overflow: hidden; margin: 0; position: relative; height: 320px;}
+.mainSlider li, .clientsSlider li{position: absolute; opacity: 0; transition: opacity 2s;}
+.mainSlider li.on{opacity: 1; transition: opacity 2s; width: 100%;}
+.mainSlider li img{height: 320px;}
+
+.clientsSlider{overflow: hidden; margin: 20px 0; position: relative; padding: 0 10px; list-style: none; width: 100%; height: 90px;}
+.clientsSlider li{position: relative; opacity: 1; transition: opacity 2s; margin: 5px 0; display: inline-block;}
+/* End Main Slider*/
+
+/* Get in touch */
+.getInTouch{margin: 15px 0;}
+/* End Get in touch */
+
+/* Solutions */
+#solutions h1 span{background-color: #0088cc; color: #FFF; font-weight: bold;}
+.solutions{list-style: none;}
+.solutions li{min-height: 130px; display: inline-block;}
+.solutions li i{background-color: #0088cc; padding: 10px; border-radius: 30px;}
+.solutions li i:hover{background-color: #5E99B7;}
+.solutions li a:hover{color: #5E99B7;}
+.solutions li i img{width: 32px; height: 32px;}
+/* End Solutions */
+
+/* News */
+.news{list-style: none; margin: 0;}
+.news li{padding: 0;}
+.news li{padding: 15px 30px; background-color: initial; transition: background-color 0.5s;}
+.news li:hover{background-color: #eee; transition: background-color 0.5s;}
+.news li img{display: block; margin: 0 auto 15px auto;}
+.news li time, .single time{background-color: #FFF; text-align: center; padding: 10px 0 0; font-weight: bold; font-size: 18px; margin-right: 10px;}
+.news li time span, .single time span{background-color: #5f5f5f; color: #FFF; display: block; margin-top: 10px; font-weight: normal; font-size: 13px;}
+.news li a{display: inline-block; font-weight: bold;}
+.news li a:hover{color: inherit;}
+/* End News */
+
+/* Comments */
+.comments{list-style: none; margin: 0; position: relative;}
+.comments li{position: absolute; opacity: 0; transition: opacity 1s;}
+.comments li:first-child{opacity: 1}
+.comments li.on{opacity: 1; transition: opacity 1s;}
+.comments li article{padding: 10px 35px; border-radius: 5px; font-style: italic;}
+.prevComment, .nextComment{color: #FFF; background-color: #a2a2a2; padding: 6px 7px; border-radius: 15px; margin: 5px 5px;}
+/* End Comments */
+
+/* Pagination */
+.paginatioLinks a, .paginatioLinks span{font-size: 15px; padding: 10px 15px; background-color: #013040; color: #FFF; margin: 0 5px;}
+.paginatioLinks a:hover, .paginatioLinks span.current{opacity: 0.8;}
+/* End Pagination */
+
+/* Newsletter */
+.newsletter{position: relative;}
+.newsletter input[type="submit"]{position: absolute; top: 0; right: 0; padding: 8px 5px; border: none;}
+/* End Newsletter */
+
+/* Single Page*/
+.single .thumbnail{text-align: center; margin: 0;}
+/* End Single Page */
+
+/* Breadcrumb */
+.delimiter::after{content: '>'; margin: 0 5px; font-family: monospace;}
+/* End Breadcrumb */
+
+/* Comments */
+.commentlist{list-style: none; margin: 0;}
+.comment-author img{display: none;}
+.comment-author cite::before{display: none;}
+.comment-author cite, .comment-author .says{font-style: normal; font-size: 16px; float: left; margin: 0px 10px 10px 0;}
+.comment-meta, .comment-body p{float: left; width: 100%;}
+.reply, #respond{margin: 15px 0 5px 0; float: left; width: 100%;}
+/* End Comments */
+
+/* NR-20 */
+#nr-20 article{line-height: 30px;}
+/* End NR-20 */
